@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Comment</title>
+</head>
+<body>
+    <h1>Удаление комментария</h1>
+    <p>Вы действительно хотите удалить комментарий?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">YДа, удалить</button>
+    </form>
+    <a href="{% url 'post_detail' id=comment.post.pk %}">Выход</a>
+</body>
+</html>

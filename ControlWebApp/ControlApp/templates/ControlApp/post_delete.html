@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Post</title>
+</head>
+<body>
+    <h1>Удалить пост</h1>
+    <p>Вы действительно хотите удалить пост?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Да, удалить</button>
+    </form>
+    <a href="{% url 'post_detail' id=post.pk %}">Выход</a>
+</body>
+</html>
+
+
+
+
+
