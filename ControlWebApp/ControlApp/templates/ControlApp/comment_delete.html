@@ -8,7 +8,7 @@
     <p>Вы действительно хотите удалить комментарий?</p>
     <form method="POST">
         {% csrf_token %}
-        <button type="submit">YДа, удалить</button>
+        <button type="submit">Да, удалить</button>
     </form>
     <a href="{% url 'post_detail' id=comment.post.pk %}">Выход</a>
 </body>

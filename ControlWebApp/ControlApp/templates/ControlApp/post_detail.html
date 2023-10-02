@@ -11,22 +11,22 @@
     <a href="{% url 'post_edit' id=post.pk %}">Edit Post</a>
     <a href="{% url 'post_delete' id=post.pk %}">Delete Post</a>
 
-    <h2>Comments:</h2>
+    <h2>Комментарии:</h2>
     <ul>
         {% for comment in post.comment_set.all %}
             <li>
                 {{ comment.author }}: {{ comment.content }}
-                <a href="{% url 'comment_edit' id=comment.pk %}">Edit</a>
-                <a href="{% url 'comment_delete' id=comment.pk %}">Delete</a>
+                <a href="{% url 'comment_edit' id=comment.pk %}">Редактировать</a>
+                <a href="{% url 'comment_delete' id=comment.pk %}">Удалить</a>
             </li>
         {% endfor %}
     </ul>
 
-    <h2>Add a Comment:</h2>
+    <h2>Добавить комментарий:</h2>
     <form method="POST" action="{% url 'comment_new' post.pk %}">
         {% csrf_token %}
         {{ comment_form.as_p }}
-        <button type="submit">Submit</button>
+        <button type="submit">Добавить</button>
     </form>
 </body>
 </html>
