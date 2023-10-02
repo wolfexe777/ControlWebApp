@@ -8,8 +8,8 @@
     <p>{{ post.content }}</p>
     <p>Posted on: {{ post.date_posted }}</p>
 
-    <a href="{% url 'post_edit' id=post.pk %}">Edit Post</a>
-    <a href="{% url 'post_delete' id=post.pk %}">Delete Post</a>
+    <a href="{% url 'post_edit' id=post.pk %}">Редактировать</a>
+    <a href="{% url 'post_delete' id=post.pk %}">Удалить</a>
 
     <h2>Комментарии:</h2>
     <ul>
